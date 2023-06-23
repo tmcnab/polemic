@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"tsss": "file:.."
+	},
+	"private": true,
+	"scripts": {
+	}
+}

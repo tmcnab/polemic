@@ -1,0 +1,19 @@
+{
+	"contributors": [
+		{
+			"email": "tristan.j.mcnab@gmail.com",
+			"name": "Tristan McNab"
+		}
+	],
+	"directories": {
+		"doc": "doc",
+		"example": "example",
+		"lib": "lib",
+		"bin": ""
+	},
+	"dependencies": {},
+	"devDependencies": {},
+	"name": "tsss",
+	"scripts": {},
+	"version": "0.0.0"
+}
