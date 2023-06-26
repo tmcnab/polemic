@@ -6,7 +6,7 @@ const configuration = () : Configuration => {
 	dotenv.config()
 
 	const result: Configuration = {
-		directory: process.cwd(),
+		directory: process.env['POLEMIC_WORKING_DIRECTORY'] || process.cwd(),
 		https: {},
 		port: Number(process.env['HTTPS_PORT']) || 8888
 	}

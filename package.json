@@ -1,5 +1,5 @@
 {
-    "bin": "bin/tsss",
+    "bin": "bin/polemic",
     "contributors": [
         {
             "email": "tristan.j.mcnab@gmail.com",
@@ -23,7 +23,7 @@
         "lib": "lib"
     },
     "main": "lib/index.ts",
-    "name": "tsss",
+    "name": "polemic",
     "scripts": {
 		"start": "ts-node ./lib/server.ts"
 	},

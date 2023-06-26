@@ -1,0 +1,3 @@
+working_directory=$(pwd)
+cd node_modules/polemic
+POLEMIC_WORKING_DIRECTORY=$working_directory npm start "$@"

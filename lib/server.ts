@@ -10,4 +10,4 @@ createServer((request, response) => {
 	response.end()
 }).listen(config.port)
 
-console.log('tsss', config)
+console.log('polemic server', config)
