@@ -17,9 +17,6 @@ class Files {
 		allFiles(routePath).forEach(item => {
 			this.#routeFiles.add(item.replace(routePath, ''))
 		})
-
-		console.log(this.#routeFiles)
-		console.log(this.#staticFiles)
 	}
 
 	get routes () {

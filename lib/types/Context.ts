@@ -13,10 +13,11 @@ class Context {
 	}
 
 	get route () {
+		const path = this.#request.url?.slice(1)
 		return [
 			this.#configuration.directory,
 			'routes',
-			`index.tsx`
+			path
 		].join('/')
 	}
 

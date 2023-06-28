@@ -10,8 +10,6 @@ const config = configuration()
 createServer((request, response) => {
 	const context = new Context(request, response)
 	const files = new Files()
-
-	console.log(files)
 	
 	import(context.route).then(module => {
 		const Component = module.default
@@ -20,7 +18,7 @@ createServer((request, response) => {
 		response.writeHead(200, { 'Content-Type': 'text/html' })
 		response.end(html)
 	}).catch(reason => {
-		response.writeHead(500)
+		response.writeHead(404)
 		response.end()
 	}).finally(() => {
 		console.log(request.method, '\t', request.url)
