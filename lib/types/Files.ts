@@ -1,13 +1,25 @@
+import allFiles from "../functions/allFiles"
 import configuration from "../functions/configuration"
 
 class Files {
 
 	#configuration = configuration()
-	#routeFiles = []
-	#staticFiles = []
+	#routeFiles = new Set<string>([])
+	#staticFiles = new Set<string>([])
 
 	constructor () {
-		[this.#configuration.directory, 'static']
+		const staticPath = [this.#configuration.directory, 'static'].join('/')
+		allFiles(staticPath).forEach(item => {
+			this.#staticFiles.add(item.replace(staticPath, ''))
+		})
+
+		const routePath = [this.#configuration.directory, 'routes'].join('/')
+		allFiles(routePath).forEach(item => {
+			this.#routeFiles.add(item.replace(routePath, ''))
+		})
+
+		console.log(this.#routeFiles)
+		console.log(this.#staticFiles)
 	}
 
 	get routes () {

@@ -10,6 +10,8 @@ const config = configuration()
 createServer((request, response) => {
 	const context = new Context(request, response)
 	const files = new Files()
+
+	console.log(files)
 	
 	import(context.route).then(module => {
 		const Component = module.default
