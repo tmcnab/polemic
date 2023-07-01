@@ -4,6 +4,9 @@ import { renderToString } from 'react-dom/server'
 import configuration from './functions/configuration'
 import Context from './types/Context'
 import Files from './types/Files'
+import Store from './data/Store'
+
+const store = new Store()
 
 const config = configuration()
 
