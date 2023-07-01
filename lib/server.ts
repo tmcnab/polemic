@@ -5,6 +5,8 @@ import configuration from './functions/configuration'
 import Context from './types/Context'
 import Files from './types/Files'
 import Store from './data/Store'
+import { create } from 'node:domain'
+import ContextProvider from './Context'
 
 const store = new Store()
 
@@ -17,6 +19,7 @@ createServer((request, response) => {
 	import(context.route).then(module => {
 		const Component = module.default
 		const element = createElement(Component, { /* props */ })
+		// const contextElement = createElement(ContextProvider.Provider, { /* TODO */ }, element)
 		const html = renderToString(element)
 		response.writeHead(200, { 'Content-Type': 'text/html' })
 		response.end(html)
